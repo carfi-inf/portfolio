@@ -1,0 +1,112 @@
+/* Reset di base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo della pagina */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  overflow-x: hidden;
+}
+
+/* Header con logo e navigazione */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  width: 100px;
+  /* Aggiusta l'altezza in automatico */
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  color: #ff6347;
+}
+
+/* Sezione principale */
+main {
+  height: 100vh;
+  /* Lascia spazio per l'header */
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 1.5rem;
+}
+
+/* Stile per il testo che cade */
+.falling-text {
+  color: #ff6347;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Stili per le lettere create da Matter.js */
+.letter {
+  position: absolute;
+  font-size: 50px;
+  font-weight: bold;
+  color: #ff6347;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  z-index: 100;
+}
+
+/* Il canvas di Matter.js verrà posizionato in background */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
